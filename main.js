@@ -26,8 +26,8 @@ function buyGoldPerClick() {
 }
 
 function buyGoldPerClick2() {
-  if (gameData.gold >= gameData.goldPerClickCost) {
-    gameData.gold -= gameData.goldPerClickCost
+  if (gameData.gold >= gameData.goldPerClick2Cost) {
+    gameData.gold -= gameData.goldPerClick2Cost
     gameData.goldPerClick2 += 1
     gameData.goldPerClick2Cost * 1.2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
@@ -36,8 +36,8 @@ function buyGoldPerClick2() {
 }
 
 function buyGoldPerClick3() {
-  if (gameData.gold >= gameData.goldPerClickCost) {
-    gameData.gold -= gameData.goldPerClickCost
+  if (gameData.gold >= gameData.goldPerClick3Cost) {
+    gameData.gold -= gameData.goldPerClick3Cost
     gameData.goldPerClick3 += 1
     gameData.goldPerClick3Cost * 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
@@ -46,8 +46,8 @@ function buyGoldPerClick3() {
 }
 
 function buyGoldPerClick4() {
-  if (gameData.gold >= gameData.goldPerClickCost) {
-    gameData.gold -= gameData.goldPerClickCost
+  if (gameData.gold >= gameData.goldPerClick4Cost) {
+    gameData.gold -= gameData.goldPerClick4Cost
     gameData.goldPerClick4 += 1
     gameData.goldPerClick4Cost * 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
