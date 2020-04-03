@@ -4,7 +4,7 @@ var gameData = {
   goldPerClickCost: 10,
   goldPerClick2Cost: 100,
   goldPerClick3Cost: 2000,
-  goldPerClick4Cost: 3000
+  goldPerClick4Cost: 30000
 }
 
 function mineGold() {
@@ -33,7 +33,7 @@ function buyMiner() {
 }
 
 var mainGameLoop = window.setInterval(function() {
-  goldPerSecond()
+  mineGold()
 }, 1000)
 
 var saveGameLoop = window.setInterval(function() {
