@@ -19,7 +19,7 @@ function buyGoldPerClick() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
     gameData.goldPerClick += 1
-    gameData.goldPerClickCost * 1.25
+    gameData.goldPerClickCost *= 1.25
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
@@ -29,7 +29,7 @@ function buyGoldPerClick2() {
   if (gameData.gold >= gameData.goldPerClick2Cost) {
     gameData.gold -= gameData.goldPerClick2Cost
     gameData.goldPerClick2 += 1
-    gameData.goldPerClick2Cost * 1.2
+    gameData.goldPerClick2Cost *= 1.2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClick2Cost + " Gold"
   }
@@ -39,7 +39,7 @@ function buyGoldPerClick3() {
   if (gameData.gold >= gameData.goldPerClick3Cost) {
     gameData.gold -= gameData.goldPerClick3Cost
     gameData.goldPerClick3 += 1
-    gameData.goldPerClick3Cost * 1.15
+    gameData.goldPerClick3Cost *= 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClick3Cost + " Gold"
   }
@@ -49,7 +49,7 @@ function buyGoldPerClick4() {
   if (gameData.gold >= gameData.goldPerClick4Cost) {
     gameData.gold -= gameData.goldPerClick4Cost
     gameData.goldPerClick4 += 1
-    gameData.goldPerClick4Cost * 1.15
+    gameData.goldPerClick4Cost *= 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClick4Cost + " Gold"
   }
