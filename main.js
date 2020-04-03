@@ -1,9 +1,10 @@
 var gameData = {
   gold: 0,
   goldPerClick: 1,
-  goldPerSecond: 0,
   goldPerClickCost: 10,
-  minerCost: 100
+  goldPerClick2Cost: 100,
+  goldPerClick3Cost: 2000,
+  goldPerClick4Cost: 3000
 }
 
 function mineGold() {
