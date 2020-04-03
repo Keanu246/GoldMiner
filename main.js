@@ -1,6 +1,9 @@
 var gameData = {
   gold: 0,
   goldPerClick: 1,
+  goldPerClick2: 5,
+  goldPerClick3: 50,
+  goldPerClick4: 400,
   goldPerClickCost: 10,
   goldPerClick2Cost: 100,
   goldPerClick3Cost: 2000,
@@ -25,8 +28,8 @@ function buyGoldPerClick() {
 function buyGoldPerClick2() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
-    gameData.goldPerClick += 5
-    gameData.goldPerClickCost * 1.2
+    gameData.goldPerClick2 += 1
+    gameData.goldPerClick2Cost * 1.2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClick2Cost + " Gold"
   }
@@ -35,8 +38,8 @@ function buyGoldPerClick2() {
 function buyGoldPerClick3() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
-    gameData.goldPerClick += 50
-    gameData.goldPerClickCost * 1.15
+    gameData.goldPerClick3 += 1
+    gameData.goldPerClick3Cost * 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClick3Cost + " Gold"
   }
@@ -45,8 +48,8 @@ function buyGoldPerClick3() {
 function buyGoldPerClick4() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
-    gameData.goldPerClick += 400
-    gameData.goldPerClickCost * 1.15
+    gameData.goldPerClick4 += 1
+    gameData.goldPerClick4Cost * 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClick4Cost + " Gold"
   }
