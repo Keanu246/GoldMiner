@@ -1,48 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser-arcade-physics.min.js"></script> 
-    <title>Gold Clicker</title>
-</head>
-<body>
-
-    <script>
-      var config = {
-      type: Phaser.AUTO,
-      width: 800,
-      height: 600,
-      physics: {
-          default: 'arcade',
-          arcade: {
-              gravity: { y: 200 }
-          }
-      },
-      scene: {
-          preload: preload,
-          create: create
-      }
-  };
-  var game = new Phaser.Game(config);
-
-  function preload ()
-  {
-      this.load.setBaseURL('http://labs.phaser.io');
-
-      this.load.sound('sky', 'assets/main.mp3');
-  }
-
-  function create ()
-  {
-      var gameData = {
-        gold: 0,
-        goldpersecond: 0,
-        goldperclick: 1,
-        miners: 0,
-        minerProduction: 0.1,
-        minerCost: 10
-      }
-  }
-  </script>
-
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Gold Clicker</title>
+        <style>body {margin: 0;padding: 0;}</style>
+ 
+        <script src="phaser.min.js"></script>
+ 
+        <script src="main.js"></script>
+    </head>
+    <body>
+ 
+    </body>
 </html>
