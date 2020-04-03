@@ -1,7 +1,8 @@
 var gameData = {
   gold: 0,
   goldPerClick: 1,
-  goldPerClickCost: 10
+  goldPerClickCost: 10,
+  miner: 100
 }
 
 function mineGold() {
@@ -13,7 +14,7 @@ function buyGoldPerClick() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
     gameData.goldPerClick += 1
-    gameData.goldPerClickCost *= 2
+    gameData.goldPerClickCost *= 1.2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
