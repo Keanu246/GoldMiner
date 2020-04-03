@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Gold Miner</title>
-  </head>
-  <body>
-    <p id="goldMined">0 Gold Mined</p>
-    <button onclick="mineGold()">Mine Gold</button>
-    <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Wood Pickaxe (Currently Level 1) Cost: 10 Gold</button>
-    <button onclick="buyGoldPerClick2()" id="perClickUpgrade">Upgrade Stone Pickaxe (Currently Level 0) Cost: 100 Gold</button>
-    <button onclick="buyGoldPerClick3()" id="perClickUpgrade">Upgrade Iron Pickaxe (Currently Level 0) Cost: 2000 Gold</button>
-    <button onclick="buyGoldPerClick4()" id="perClickUpgrade">Upgrade Gold Pickaxe (Currently Level 0) Cost: 30000 Gold</button>
-    <script src="main.js" charset="utf-8" type="text/javascript"></script>
-  </body>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser-arcade-physics.min.js"></script> 
+    <title>Gold Clicker</title>
+</head>
+<body>
+
+    <script>
+      var config = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      physics: {
+          default: 'arcade',
+          arcade: {
+              gravity: { y: 200 }
+          }
+      },
+      scene: {
+          preload: preload,
+          create: create
+      }
+  };
+  var game = new Phaser.Game(config);
+
+  function preload ()
+  {
+      this.load.setBaseURL('http://labs.phaser.io');
+
+      this.load.sound('sky', 'assets/main.mp3');
+  }
+
+  function create ()
+  {
+      var gameData = {
+        gold: 0,
+        goldpersecond: 0,
+        goldperclick: 1,
+        miners: 0,
+        minerProduction: 0.1,
+        minerCost: 10
+      }
+  }
+  </script>
+
+</body>
 </html>
