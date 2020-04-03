@@ -1,8 +1,10 @@
 var gameData = {
   gold: 0,
   goldPerClick: 1,
+  goldPerSecond: 0,
   goldPerClickCost: 10,
-  miner: 100
+  miner: 0,
+  minerCost: 100
 }
 
 function mineGold() {
@@ -16,7 +18,17 @@ function buyGoldPerClick() {
     gameData.goldPerClick += 1
     gameData.goldPerClickCost *= 1.2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.minerCost + " Gold"
+  }
+}
+
+function buyMiner() {
+  if (gameData.gold >= gameData.minerCost) {
+    gameData.gold -= gameData.minerCost
+    gameData.miner += 1
+    gameData.minerCost *= 1.15
+    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+    document.getElementById("GPSUpgrade").innerHTML = "Upgrade Miner (Currently Level " + gameData.goldPerSecond + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
 }
 
