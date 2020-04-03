@@ -16,19 +16,19 @@ function buyGoldPerClick() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
     gameData.goldPerClick += 1
-    gameData.goldPerClickCost * 1.2
+    gameData.goldPerClickCost * 1.25
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
 }
 
-function buyMiner() {
-  if (gameData.gold >= gameData.minerCost) {
-    gameData.gold -= gameData.minerCost
-    gameData.goldPerSecond += 1
-    gameData.minerCost * 1.1
+function buyGoldPerClick2() {
+  if (gameData.gold >= gameData.goldPerClickCost) {
+    gameData.gold -= gameData.goldPerClickCost
+    gameData.goldPerClick += 5
+    gameData.goldPerClickCost * 1.2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-    document.getElementById("perSecondUpgrade").innerHTML = "Upgrade Miner (Currently Level " + gameData.goldPerSecond + ") Cost: " + gameData.minerCost + " Gold"
+    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
 }
 
