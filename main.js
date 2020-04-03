@@ -26,6 +26,7 @@ function buyMiner() {
   if (gameData.gold >= gameData.minerCost) {
     gameData.gold -= gameData.minerCost
     gameData.miner += 1
+    gameData.goldPerSecond += 1
     gameData.minerCost *= 1.15
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("GPSUpgrade").innerHTML = "Upgrade Miner (Currently Level " + gameData.goldPerSecond + ") Cost: " + gameData.goldPerClickCost + " Gold"
